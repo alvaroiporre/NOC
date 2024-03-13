@@ -1,1 +1,9 @@
-console.log("hello world NOC!");
+import { Server } from "./presentation/server";
+const main = () => {
+  Server.start();
+}
+
+(async () => {
+  main()
+})();
+
