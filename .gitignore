@@ -1,7 +1,7 @@
 node_modules
 dist/
 logs
-mongo_volumes/
+*volumes/
 
 *.env
 .DS_Store
