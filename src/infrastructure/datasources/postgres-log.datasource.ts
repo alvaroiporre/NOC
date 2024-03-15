@@ -17,6 +17,9 @@ export class PostgresLogDatasource implements LogDatasource {
       ...log,
       level
     }});
+
+    console.log('Postgres saved!', newLog.id);
+
   }
   async getLogs(severityLevel: LogSeverityLevel): Promise<LogEntity[]> {
     const level = severityEnum[severityLevel];
