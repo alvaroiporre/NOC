@@ -14,5 +14,4 @@ export class MongoLogDatasource implements LogDatasource {
     });
     return logs.map(LogEntity.fromObject); //return logs.map( mongoLog => LogEntity.fromObject(mongoLog) )
   }
-
 }
