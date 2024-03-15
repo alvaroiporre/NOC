@@ -3,5 +3,5 @@ dist/
 logs
 mongo/
 
-*.env*
+*.env
 .DS_Store
