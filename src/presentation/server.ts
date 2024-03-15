@@ -25,18 +25,18 @@ export class Server {
     //Mandar Email
     // new SenEmailLogs(emailService, fileSystemLogRepository).execute(['tecno_economica@hotmail.com', 'alvaroiporremartinez@gmail.com']);
 
-    CronService.createJob("*/5 * * * * *", () => {
-      const url = "https://google.com";
-      // new CheckService(logRepository,
-      //   () => console.log('success'),
-      //   (error) => console.log(error)
-      // ).execute(url);
+    // CronService.createJob("*/5 * * * * *", () => {
+    //   const url = "https://google.com";
+    //   // new CheckService(logRepository,
+    //   //   () => console.log('success'),
+    //   //   (error) => console.log(error)
+    //   // ).execute(url);
 
-      new CheckServiceMultiple(
-        [FsLogRepository, MongoLogRepository, PostgresLogRepository],
-        () => console.log("success"),
-        (error) => console.log(error)
-      ).execute(url);
-    });
+    //   new CheckServiceMultiple(
+    //     [FsLogRepository, MongoLogRepository, PostgresLogRepository],
+    //     () => console.log("success"),
+    //     (error) => console.log(error)
+    //   ).execute(url);
+    // });
   }
 }
