@@ -3,15 +3,15 @@ import mongoose from "mongoose";
 const logSchema = new mongoose.Schema({
   level: {
     type: String,
+    enum: ['low', 'medium', 'high'],
     required: true,
+    default: 'low',
   },
   message: {
     type: String,
   },
   origin: {
     type: String,
-    enum: ['low', 'medium', 'high'],
-    default: 'low',
   },
   createdAt: {
     type: Date,
